@@ -47,7 +47,7 @@ Feedback Profissional: O envio do formulário é uma simulação que exibe um ba
 git clone
 
 ```bash
-git clone [https://github.com/luanbjamin/codegenius-lp.git](https://github.com/luanbjamin/codegenius-lp.git)
+git clone https://github.com/luanbjamin/codegenius-lp.git
 
 2. Navegue até a Pasta:
 cd codegenius-lp (Se o nome do seu diretório for o mesmo do repositório, mantenha. Se não, use cd nome-do-repo.)
@@ -61,4 +61,4 @@ Alternativamente, abra o arquivo index.html diretamente no seu navegador.
 📸 Demonstração ao Vivo
 
 **Acesse a Landing Page em funcionamento aqui:**
-[CodeGenius Demo Live](https://luanbjamin.github.io/codegenius-lp/)
+CodeGenius Demo Live https://luanbjamin.github.io/codegenius-lp/
