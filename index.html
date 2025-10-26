@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon/codecon.ico" type="image/x-icon">
+    <title>CodeGenius: O Assistente de Código com IA para Devs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+    <div class="video-background-full"> 
+        <video autoplay muted loop playsinline class="full-page-video"> 
+            <source src="assets/video/codegenius-ia.webm" type="video/webm">
+            <source src="assets/video/codegenius-ia.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5. </video>
+    </div>
+
+    <div class="site-content-wrapper">
+        
+        <div id="success-banner" class="success-banner" role="alert" aria-live="assertive">
+            <div class="container">
+                <p>✅✨ Sucesso! Bem-vindo ao CodeGenius! Seu acesso de 7 dias foi liberado. Fique de olho na sua caixa de entrada (Simulação).</p>
+            </div>
+        </div>
+
+        <header class="hero-section">
+            <div class="container hero-content-overlay">
+                <h1 class="headline">Poupe Horas de Codificação Manual: Conheça o CodeGenius, seu Assistente de IA Pessoal.</h1>
+                
+                <p class="subhead box-highlight">
+                    A IA que entende o seu código, sugere soluções complexas<br> e gera documentação completa em mais de 10 linguagens.
+                </p>
+
+                <button class="cta-button primary-cta">Comece o seu<br> Teste Gratuito<br> agora!</button> 
+            </div>
+        </header>
+
+        <main>
+            <section id="beneficios" class="benefits-section">
+                <div class="container">
+                    <h2>O que você ganha com CodeGenius?</h2>
+                    <ul class="benefits-list">
+                        <li class="benefit-item">
+                            <h3>Geração Instantânea</h3>
+                            <p>Crie Funções Complexas em Segundos, sem sair do seu editor de código. Velocidade máxima com qualidade de sênior.</p>
+                            <picture>
+                                <source srcset="assets/img/geracao-instantanea.webp" type="image/webp">
+                                <img src="assets/img/geracao-instantanea.jpg" alt="Ilustração de relógio digital com setas rápidas, simbolizando geração instantânea de código" loading="lazy" width="300" height="200">
+                            </picture>
+                        </li>
+                        <li class="benefit-item">
+                            <h3>Refatoração Inteligente</h3>
+                            <p>Transforme Código Legado em Padrões Modernos e limpos. A IA identifica e aplica as melhores práticas automaticamente.</p>
+                            <picture>
+                                <source srcset="assets/img/refatoracao-ia.webp" type="image/webp">
+                                <img src="assets/img/refatoracao-ia.jpg" alt="Ilustração de cubos de código se reorganizando, simbolizando refatoração inteligente" loading="lazy" width="300" height="200">
+                            </picture>
+                        </li>
+                        <li class="benefit-item">
+                            <h3>Detecção de Bugs</h3>
+                            <p>Encontre Falhas Críticas Antes do Deploy. Nossa IA vasculha o código e sugere correções precisas em tempo real.</p>
+                            <picture>
+                                <source srcset="assets/img/deteccao-de-bugs.webp" type="image/webp">
+                                <img src="assets/img/deteccao-bugs.jpg" alt="Ilustração de lupa sobre código com erro destacado, simbolizando detecção de bugs por IA" loading="lazy" width="300" height="200">
+                            </picture>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="prova-social" class="social-proof-section">
+                <div class="container">
+                    <h2>Quem usa, aprova.</h2>
+                    
+                    <div class="testimonials-grid">
+                        
+                        <div class="testimonial-card">
+                            <p class="quote">"O CodeGenius me deu 2 horas a mais por dia! Essencial para o meu pipeline, especialmente para refatoração de código antigo. A melhoria de performance da minha equipe foi notável."</p>
+                            <p class="author">- Luan Benjamin, Engenheiro de Software na TechSolutions</p>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <p class="quote">"Finalmente encontramos uma ferramenta que realmente caça bugs antes que eles cheguem em produção. A integração com nosso ambiente de QA foi perfeita e economizou incontáveis horas."</p>
+                            <p class="author">- Alícia Fonseca, Analista de QA na AlphaCode</p>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <p class="quote">"A documentação automática é um game-changer. Em vez de passar dias nisso, a IA cuida de 90% do trabalho, me permitindo focar em novos recursos. Altamente recomendado!"</p>
+                            <p class="author">- Julyane Menezes, Desenvolvedora Front-end Sênior</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta-final" class="final-cta-section"> 
+                <div class="container">
+                    <h2>Pronto para Codificar no Modo Gênio?</h2>
+                    <p>Junte-se a milhares de desenvolvedores que estão reescrevendo o futuro do código.</p>
+
+                    <form id="free-trial-form">
+                        <input type="email" id="email" placeholder="Seu melhor e-mail profissional" required aria-label="E-mail para teste gratuito">
+                        <button type="submit" class="cta-button secondary-cta">Comece Seu Teste Gratuito Agora!</button>
+                    </form>
+
+                    <p class="small-print">Não é necessário cartão de crédito. Teste de 7 dias. Sem compromisso.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 CodeGenius, Inc. Todos os direitos reservados.</p>
+                <nav class="footer-nav">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Serviço</a>
+                </nav>
+            </div>
+        </footer>
+    </div> 
+
+    <script>
+        // JS para interação e rolagem suave (Sem mexer aqui por enquanto)
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Seletores do Formulário e CTA ---
+            const form = document.getElementById('free-trial-form');
+            const primaryCtaButton = document.querySelector('.cta-button.primary-cta');
+            const targetSection = document.getElementById('cta-final');
+            const emailInput = document.getElementById('email');
+            const successBanner = document.getElementById('success-banner'); 
+
+            // Função para mostrar e esconder o banner (Melhora a UX)
+            const showSuccessBanner = () => {
+                if (successBanner) {
+                    successBanner.classList.add('show');
+                    
+                    // Esconde o banner após 5 segundos
+                    setTimeout(() => {
+                        successBanner.classList.remove('show');
+                    }, 5000);
+                }
+            };
+
+
+            // 1. Lógica do Formulário (Simulação de Envio)
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const email = emailInput.value;
+
+                    // Validação simples
+                    if (!email || !email.includes('@') || email.length < 5) {
+                        alert('Por favor, insira um e-mail válido para começar seu teste!');
+                        emailInput.focus();
+                        return;
+                    }
+
+                    console.log('E-mail capturado:', email);
+                    
+                    // Mostra o feedback de sucesso
+                    showSuccessBanner();
+                    
+                    form.reset();
+                });
+            }
+
+            // 2. Lógica de Interação: Rolagem Suave
+            if (primaryCtaButton && targetSection) {
+                primaryCtaButton.addEventListener('click', function(e) {
+                    
+                    e.preventDefault(); // Evita a navegação padrão (se for um link)
+                    
+                    // Rolagem suave para a seção do formulário
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                    if (emailInput) {
+                        // Foco após a rolagem para melhor usabilidade
+                        setTimeout(() => emailInput.focus(), 500); 
+                    }
+                });
+            } else {
+                console.error("ERRO JS: Elementos de Rolagem (primary-cta ou cta-final) não foram encontrados. Verifique IDs e Classes no HTML.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* ==========================================================================
+   ESTILOS BASE E MOBILE-FIRST
+   ========================================================================== */
+
+/* Cores e Variáveis (Tema Dark Tech): Foco no Neon/Ciano. Defini isso para ser fácil de manter depois! */
+:root {
+    --bg-dark: #1a1a2e; /* Fundo principal (roxo escuro) */
+    --bg-medium: #2a2a4a; /* Fundo de seção 1 */
+    --bg-light: #3a3a5a; /* Fundo de cards/seção 2 */
+    --text-light: #e0e0e0; /* Texto principal claro */
+    --text-medium: #c0c0e0; /* Texto secundário */
+    --accent-blue: #00bcd4; /* Ciano Neon (CTA primário, bordas) */
+    --accent-magenta: #e91e63; /* Magenta (CTA secundário, destaque) */
+    --shadow-neon-blue: 0 0 15px rgba(0, 255, 255, 0.4); /* Sombra de brilho ciano */
+    --shadow-neon-magenta: 0 0 15px rgba(255, 0, 255, 0.4); /* Sombra de brilho magenta */
+}
+
+/* ==========================================================================
+   ESTILOS MOVIDOS DO HTML INLINE (<style> tag) - CRITICAL CSS
+   (Mantenho aqui o CSS crítico/reset)
+   ========================================================================== */
+body { 
+    /* Estilos base: reset, fonte e cores */
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    color: var(--text-light); 
+    background-color: transparent; 
+    min-height: 100vh; 
+    position: relative;
+    /* Cursor personalizado: Um pequeno foguete! */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewport="0 0 100 100" style="font-size:24px;"><text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle">🚀</text></svg>'), auto;
+}
+
+.container { 
+    /* O contêiner básico para centralizar o conteúdo. */
+    width: 100%; 
+    padding: 0 1.5rem; 
+    box-sizing: border-box; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 960px; 
+}
+
+.hero-section { 
+    /* Seção principal (Hero) */
+    padding: 0; 
+    text-align: center; 
+    color: #ffffff; 
+    background-color: transparent; 
+    position: static; 
+    overflow: visible; 
+} 
+
+.hero-content-overlay { 
+    /* Área de conteúdo do herói, precisa de z-index alto para ficar sobre o vídeo. */
+    position: relative; 
+    z-index: 5; 
+    padding: 6rem 1.5rem; 
+    border-radius: 12px; 
+}
+
+.headline { 
+    /* Estilo do H1, mantendo-o grande e branco. */
+    font-size: 2.5rem; 
+    line-height: 1.2; 
+    color: #ffffff; 
+    margin-bottom: 1rem; 
+}
+
+.subhead { 
+    /* Reset da submanchete. */
+    margin-bottom: 2rem; 
+}
+
+.cta-button { 
+    /* Botões: Tive que manter os estilos mais cruciais aqui. */
+    display: block; 
+    width: 100%; 
+    padding: 1rem; 
+    margin: 1.5rem auto; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1.125rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    text-align: center; 
+    background-color: var(--accent-blue); 
+    color: #ffffff; 
+    transition: all 0.3s ease; 
+    max-width: 300px; 
+    position: relative; 
+    z-index: 10;
+    
+    /* Neon Shadow aplicado ao botão primário */
+    box-shadow: var(--shadow-neon-blue); 
+}
+
+.cta-button:hover { 
+    /* Efeito base de hover do botão primário */
+    background-color: #0097a7; 
+}
+
+.video-background-full {
+    /* Onde o vídeo fica: fixo e por baixo de tudo. */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -2; 
+    overflow: hidden; 
+    pointer-events: none;
+}
+
+/* Banner de Sucesso (Estilo do componente) - Vai deslizar! */
+.success-banner {
+    position: fixed; 
+    top: -100px; 
+    left: 0; 
+    width: 100%; 
+    padding: 1rem 0; 
+    background-color: var(--accent-blue); 
+    color: var(--bg-dark); /* Texto escuro no ciano */
+    text-align: center; 
+    font-weight: bold; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    z-index: 1000; 
+    transition: top 0.5s ease-out; 
+}
+
+.success-banner.show { 
+    /* O truque do slide-down */
+    top: 0; 
+}
+
+/* ==========================================================================
+   ESTILOS REMANESCENTES (ORGANIZADOS POR SEÇÃO)
+   ========================================================================== */
+
+/* Cursor para elementos interativos: garante a mãozinha */
+a, button, .cta-button, .benefit-item {
+    cursor: pointer !important;
+}
+
+/* Base de Tipografia e Layout */
+h2, h3 { color: var(--text-light); } 
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+p { margin-bottom: 1.5rem; color: var(--text-medium); }
+
+/* Links */
+a { color: var(--accent-blue); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--accent-magenta); }
+
+/* Botões CTA - Específicos */
+.primary-cta:hover {
+    /* Adicionando um pequeno movimento e mudando o brilho no hover */
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-neon-magenta); /* Fica mais dinâmico mudando de cor */
+}
+
+.secondary-cta {
+    /* Estilo do botão do formulário final (Magenta) */
+    background-color: var(--accent-magenta); 
+    color: white; /* Corrigido: Estava com caracteres inválidos */
+    box-shadow: var(--shadow-neon-magenta); 
+    font-size: 1rem; 
+    position: relative; 
+    z-index: 10; /* Corrigido: Estava com caracteres inválidos */
+}
+
+.secondary-cta:hover {
+    background-color: #c2185b;
+    transform: translateY(-3px); /* Movimento igual ao primário */
+    box-shadow: var(--shadow-neon-blue); /* Mudança de brilho */
+}
+
+/* Base de Seções: padding padrão */
+section { padding: 6rem 0; }
+
+/* VÍDEO DE FUNDO: Garante que o vídeo preencha sempre a tela */
+.full-page-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+}
+
+/* Overlay do Conteúdo */
+.site-content-wrapper {
+    position: relative;
+    z-index: 1; 
+    /* Overlay escuro semi-transparente sobre o vídeo para o texto aparecer */
+    background-color: rgba(26, 26, 46, 0.7); 
+    min-height: 100vh; 
+}
+
+/* SUB-MANCHETE COM DESTAQUE EM BOX (box-highlight) - Devo ter certeza que ele se destaca! */
+.subhead.box-highlight {
+    background-color: rgba(0, 188, 212, 0.1); /* Um pouco de cor no fundo */
+    padding: 0.8rem 1.5rem; 
+    border-radius: 8px; 
+    border: 1px solid var(--accent-blue); 
+    display: inline-block; 
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto; 
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Brilho sutil */
+    text-align: center; 
+    font-size: 1.25rem; 
+    line-height: 1.5; 
+    color: var(--text-light); 
+    margin-top: 0; 
+}
+
+/* SEÇÃO DE BENEFÍCIOS */
+.benefits-section { background-color: rgba(42, 42, 74, 0.8); }
+.benefits-list { list-style: none; padding: 0; display: flex; flex-direction: column; align-items: center; } /* Mobile: Lista em coluna */
+.benefit-item {
+    margin-bottom: 3rem; 
+    padding: 2rem; 
+    border-left: 4px solid var(--accent-blue); /* Borda de destaque */
+    background-color: rgba(58, 58, 90, 0.9); 
+    border-radius: 8px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    max-width: 500px; 
+    text-align: center;
+}
+.benefit-item h3 { color: var(--accent-blue); margin-bottom: 0.5rem; }
+.benefit-item img { 
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    margin-top: 1.5rem; 
+    border-radius: 8px; 
+    box-shadow: var(--shadow-neon-magenta); /* Sombra magenta para as imagens */
+}
+
+/* PROVA SOCIAL (Depoimentos) */
+.social-proof-section { background-color: rgba(26, 26, 46, 0.8); text-align: center; }
+.testimonials-grid {
+    display: flex;
+    flex-direction: column; /* Mobile: um abaixo do outro */
+    gap: 2rem; 
+    max-width: 600px;
+    margin: 0 auto; 
+}
+.testimonial-card {
+    background-color: rgba(58, 58, 90, 0.9); 
+    padding: 2.5rem; 
+    border-radius: 8px; 
+    box-shadow: var(--shadow-neon-blue); /* Brilho azul para os depoimentos */
+    margin: 0; 
+    height: 100%; 
+    box-sizing: border-box;
+    text-align: center; 
+}
+.quote { font-style: italic; font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--text-light); }
+.author { font-weight: bold; color: var(--accent-magenta); }
+
+/* CTA FINAL - FORMULÁRIO */
+.final-cta-section { background-color: rgba(42, 42, 74, 0.8); color: var(--text-light); text-align: center; }
+#free-trial-form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+    margin-top: 2rem; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto; 
+    position: relative; 
+    z-index: 10;
+}
+#free-trial-form input[type="email"] {
+    /* Input com estilo "tech" */
+    padding: 1rem; 
+    border: 1px solid var(--accent-blue); 
+    background-color: var(--bg-dark); 
+    color: var(--text-light);
+    border-radius: 8px; 
+    font-size: 1rem; 
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+}
+#free-trial-form input[type="email"]::placeholder { color: #888; }
+.small-print { font-size: 0.875rem; margin-top: 1rem; color: var(--text-medium); }
+
+/* RODAPÉ */
+footer {
+    background-color: rgba(13, 13, 26, 0.95); 
+    color: #999; 
+    padding: 2.5rem 0; 
+    text-align: center; 
+    font-size: 0.875rem; 
+    border-top: 1px solid #333;
+}
+.footer-nav a { color: var(--accent-blue); margin: 0 0.8rem; transition: color 0.3s ease; }
+.footer-nav a:hover { color: var(--accent-magenta); }
+
+/* ==========================================================================
+   MEDIA QUERY PARA DESKTOP (Acima de 768px)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    /* Container maior para telas grandes */
+    .container { max-width: 1200px; }
+    h1 { font-size: 3.5rem; } 
+    h2 { font-size: 2.5rem; }
+    .subhead { font-size: 1.5rem; }
+    .hero-content-overlay { padding: 8rem 1.5rem; }
+
+    /* Layout dos 3 benefícios: grid de 3 colunas */
+    .benefits-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: stretch; }
+    .benefit-item { margin-bottom: 0; text-align: left; max-width: none; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    /* Layout de 3 colunas para Testimonials */
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1.5rem; 
+        max-width: none;
+    }
+
+    /* Formulário final: inline (input e botão lado a lado) */
+    #free-trial-form { flex-direction:row; max-width: 650px; margin: 2rem auto 0 auto; width: 100%; gap: 0.5rem; }
+    #free-trial-form input[type="email"] { flex-grow: 1; min-width: 200px; }
+    .secondary-cta { width: auto; flex-grow: 0; min-width: 200px; }
+    
+    /* Ajustes para a Sub-manchete em desktop */
+    .subhead.box-highlight {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajuste de Sub-manchete para dispositivos móveis (Garantir que não quebre) */
+@media (max-width: 767px) {
+    .subhead.box-highlight {
+        font-size: 1rem; 
+        padding: 0.6rem 1rem; 
+        max-width: 90%; 
+    }
+}
