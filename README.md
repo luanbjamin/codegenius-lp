@@ -41,9 +41,13 @@ Rolagem Suave: O botão principal na seção Hero utiliza scrollIntoView({ behav
 Feedback Profissional: O envio do formulário é uma simulação que exibe um banner de sucesso (com transição top) em vez do alert padrão, melhorando o look and feel da aplicação.
 
 ⚙️ Como Visualizar Localmente
+
 1. Clone o Repositório:
 
-git clone 
+git clone
+
+```bash
+git clone [https://github.com/luanbjamin/codegenius-lp.git](https://github.com/luanbjamin/codegenius-lp.git)
 
 2. Navegue até a Pasta:
 cd codegenius-lp (Se o nome do seu diretório for o mesmo do repositório, mantenha. Se não, use cd nome-do-repo.)
@@ -55,3 +59,6 @@ A maneira mais fácil é usar a extensão Live Server no VS Code.
 Alternativamente, abra o arquivo index.html diretamente no seu navegador.
 
 📸 Demonstração ao Vivo
+
+**Acesse a Landing Page em funcionamento aqui:**
+[CodeGenius Demo Live](https://luanbjamin.github.io/codegenius-lp/)
